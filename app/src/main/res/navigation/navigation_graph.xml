@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/fragmentScreen1">
+
+    <fragment
+        android:id="@+id/fragmentScreen1"
+        android:name="com.binar.navigationexercise.FragmentScreen1"
+        android:label="fragment_screen1"
+        tools:layout="@layout/fragment_screen1" >
+        <action
+            android:id="@+id/action_fragmentScreen1_to_fragmentScreen2"
+            app:destination="@id/fragmentScreen2" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentScreen2"
+        android:name="com.binar.navigationexercise.FragmentScreen2"
+        android:label="fragment_screen2"
+        tools:layout="@layout/fragment_screen2" >
+        <argument
+            android:name="dataParcel"
+            app:argType="com.binar.navigationexercise.data.User" />
+    </fragment>
+</navigation>
